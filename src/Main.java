@@ -4,7 +4,7 @@ public class Main {
 
     static final int BOARD_SIZE =3;
     static final int PLAYER_X =1;
-//    static final int PLAYER_0=-1;
+
 
     public static void main(String[] args) {
         int [][] board = new int[BOARD_SIZE][BOARD_SIZE];
@@ -27,24 +27,21 @@ public class Main {
             int position =input();
             int row =(int)(position -1)/BOARD_SIZE;
             int col =(int) (position -1)/BOARD_SIZE;
-//            if(board[row][col]!=PLAYER_X && board[row][col]!=PLAYER_0){
-//                board[row][col]=currentPlayer;
-//            }else {
+
                 System.out.printf("Already input value on position %d\n",position);
                 continue;
             }
             numberTurn++;
             currentPlayer=-currentPlayer;
         }
-//    }
+
     static void drawBoard(int [][]board){
         for (int row = 0; row < BOARD_SIZE; row++) {
             for (int col = 0; col < BOARD_SIZE; col++) {
                 int value = board[row][col];
                 if (value == PLAYER_X) {
                     System.out.printf("|  X  ");
-//                }else if (value==PLAYER_0){
-//                    System.out.printf("|  0  ");
+
                 }else{
                     System.out.printf("|    ");
                 }
